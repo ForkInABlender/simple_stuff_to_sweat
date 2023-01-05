@@ -1,0 +1,18 @@
+<html id="listener" style="display:hidden">
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.11.0/brython.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.11.0/brython_stdlib.js"></script>
+<script type="text/python">
+from browser import document, console
+
+def listener(ev):
+	console.log(f"{ev.srcElement}: {ev.x}, {ev.y}")
+
+document["listener"].bind("mousemove", listener)
+console.log(dir(document))
+</script>
+
+
+<body onload="brython()">
+</body>
+</html>
